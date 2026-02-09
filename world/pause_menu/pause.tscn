@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://gy64jp4l3ui0"]
+[gd_scene load_steps=3 format=3 uid="uid://gy64jp4l3ui0"]
 
-[ext_resource type="Script" uid="uid://cnj0uj04ggtqo" path="res://world/pause_menu/pause.gd" id="1_uhw58"]
+[ext_resource type="Script" uid="uid://8wh56viitj6k" path="res://world/pause_menu/pause.gd" id="1_uhw58"]
+[ext_resource type="Script" uid="uid://bbkkfrqjpl3m7" path="res://world/pause_menu/settings_ui.gd" id="2_ok3k7"]
 
 [node name="PauseMenu" type="PanelContainer"]
 process_mode = 3
@@ -24,6 +25,102 @@ text = "Resume"
 layout_mode = 2
 toggle_mode = true
 text = "Settings"
+
+[node name="SettingsUI" type="Control" parent="1/1/Settings"]
+visible = false
+anchors_preset = 0
+offset_left = -299.0
+offset_right = -259.0
+offset_bottom = 40.0
+script = ExtResource("2_ok3k7")
+
+[node name="SettingsMenu" type="ColorRect" parent="1/1/Settings/SettingsUI"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 1.0
+offset_right = 296.0
+offset_bottom = 293.0
+color = Color(0.09411765, 0.25490198, 0.07058824, 1)
+
+[node name="LabelSFX" type="Label" parent="1/1/Settings/SettingsUI"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 1.0
+offset_right = 519.0
+offset_bottom = 68.0
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 48
+text = "SFX"
+horizontal_alignment = 1
+
+[node name="SFXVolume" type="Label" parent="1/1/Settings/SettingsUI"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 32.0
+offset_right = 360.0
+offset_bottom = 136.0
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonSFXMinus" type="Button" parent="1/1/Settings/SettingsUI"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 32.0
+offset_right = 126.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 32
+text = "-"
+
+[node name="ButtonSFXPlus" type="Button" parent="1/1/Settings/SettingsUI"]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 32.0
+offset_right = 296.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 32
+text = "+"
+
+[node name="LabelMusic" type="Label" parent="1/1/Settings/SettingsUI"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 85.0
+offset_right = 519.0
+offset_bottom = 152.0
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 48
+text = "Music"
+horizontal_alignment = 1
+
+[node name="MusicVolume" type="Label" parent="1/1/Settings/SettingsUI"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 116.0
+offset_right = 360.0
+offset_bottom = 220.0
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonMusicMinus" type="Button" parent="1/1/Settings/SettingsUI"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 116.0
+offset_right = 126.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 32
+text = "-"
+
+[node name="ButtonMusicPlus" type="Button" parent="1/1/Settings/SettingsUI"]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 116.0
+offset_right = 296.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 32
+text = "+"
 
 [node name="Exit" type="Button" parent="1/1"]
 layout_mode = 2

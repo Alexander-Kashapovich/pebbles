@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://dobv00wgcr200"]
+[gd_scene load_steps=10 format=3 uid="uid://dobv00wgcr200"]
 
-[ext_resource type="Script" uid="uid://dndvx4ipry4et" path="res://boss/boss.gd" id="1_1oc2v"]
-[ext_resource type="Script" uid="uid://nepufooq6x6t" path="res://misc/vital_property.gd" id="2_hqu54"]
-[ext_resource type="Script" uid="uid://dxpkst0by517r" path="res://Visual/visual.gd" id="3_tnfrm"]
+[ext_resource type="Script" uid="uid://bd4dnea55mk46" path="res://boss/boss.gd" id="1_1oc2v"]
+[ext_resource type="Script" uid="uid://cgej5qjjmqjgp" path="res://misc/vital_property.gd" id="2_hqu54"]
+[ext_resource type="Script" uid="uid://nhldr1fr7d7k" path="res://Visual/visual.gd" id="3_tnfrm"]
 [ext_resource type="Texture2D" uid="uid://d3sdkc5fsc23t" path="res://icon.svg" id="4_7o460"]
 [ext_resource type="PackedScene" uid="uid://drkd71rmgtlws" path="res://misc/hp_bar.tscn" id="5_jflut"]
+[ext_resource type="AudioStream" uid="uid://ba6dkhfikkryy" path="res://SFX/hit_monster.mp3" id="6_ti23b"]
+[ext_resource type="AudioStream" uid="uid://b5ti2tmtg7bpm" path="res://Music/phase1.mp3" id="7_glpsb"]
+[ext_resource type="Script" uid="uid://djsu7c4k0p5oy" path="res://boss/phase_music.gd" id="8_205ta"]
 
 [sub_resource type="Resource" id="Resource_ov2xu"]
 script = ExtResource("2_hqu54")
@@ -17,7 +20,6 @@ hp = SubResource("Resource_ov2xu")
 [node name="Visual" type="Node2D" parent="." node_paths=PackedStringArray("sp")]
 script = ExtResource("3_tnfrm")
 sp = NodePath("Sprite2D")
-metadata/_custom_type_script = "uid://dxpkst0by517r"
 
 [node name="Sprite2D" type="Sprite2D" parent="Visual"]
 modulate = Color(1, 0, 0, 1)
@@ -32,3 +34,11 @@ size_flags_vertical = 1
 unit = NodePath("..")
 
 [node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ti23b")
+bus = &"SFX"
+
+[node name="PhaseMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_glpsb")
+autoplay = true
+bus = &"Music"
+script = ExtResource("8_205ta")

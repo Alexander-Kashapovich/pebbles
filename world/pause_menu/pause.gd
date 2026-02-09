@@ -19,7 +19,7 @@ func _resume() -> void:
 	_switch()
 
 func _settings(val:bool) -> void:
-	pass
+	$"1/1/Settings/SettingsUI".visible = val
 
 func _exit() -> void:
 	owner.to_mm()
