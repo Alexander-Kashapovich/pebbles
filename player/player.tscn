@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://duc2akslqnhhs"]
+[gd_scene load_steps=8 format=3 uid="uid://duc2akslqnhhs"]
 
-[ext_resource type="Script" uid="uid://c6ue0diweirkj" path="res://player/player.gd" id="1_x2rei"]
-[ext_resource type="Script" uid="uid://nepufooq6x6t" path="res://misc/vital_property.gd" id="2_bmqap"]
-[ext_resource type="Script" uid="uid://dxpkst0by517r" path="res://Visual/visual.gd" id="3_hrgss"]
+[ext_resource type="Script" uid="uid://7vcbtu2ll0s6" path="res://player/player.gd" id="1_x2rei"]
+[ext_resource type="Script" uid="uid://cgej5qjjmqjgp" path="res://misc/vital_property.gd" id="2_bmqap"]
+[ext_resource type="Script" uid="uid://nhldr1fr7d7k" path="res://Visual/visual.gd" id="3_hrgss"]
 [ext_resource type="Texture2D" uid="uid://d3sdkc5fsc23t" path="res://icon.svg" id="4_ifkja"]
 [ext_resource type="PackedScene" uid="uid://drkd71rmgtlws" path="res://misc/hp_bar.tscn" id="5_ehofn"]
+[ext_resource type="AudioStream" uid="uid://hb373rpahcje" path="res://SFX/hit_hero.mp3" id="5_g6k8r"]
 
 [sub_resource type="Resource" id="Resource_fyhu2"]
 script = ExtResource("2_bmqap")
@@ -17,13 +18,14 @@ hp = SubResource("Resource_fyhu2")
 [node name="Visual" type="Node2D" parent="." node_paths=PackedStringArray("sp")]
 script = ExtResource("3_hrgss")
 sp = NodePath("Sprite2D")
-metadata/_custom_type_script = "uid://dxpkst0by517r"
 
 [node name="Sprite2D" type="Sprite2D" parent="Visual"]
 position = Vector2(-262, 94)
 texture = ExtResource("4_ifkja")
 
 [node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_g6k8r")
+bus = &"SFX"
 
 [node name="HpBar" parent="." node_paths=PackedStringArray("unit") instance=ExtResource("5_ehofn")]
 offset_left = -324.0

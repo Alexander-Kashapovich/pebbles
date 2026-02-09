@@ -12,6 +12,7 @@ func attack() -> void:
 	pass
 
 func apply_damage(val:float) -> void:
+	$Sound.play()
 	hp.force_decrease(val)
 	
 func die() -> void:
