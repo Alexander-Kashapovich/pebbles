@@ -1,0 +1,182 @@
+[gd_scene load_steps=27 format=3 uid="uid://cdkp1i8d3f4rk"]
+
+[ext_resource type="Script" uid="uid://wskfya8eo6sq" path="res://world/world.gd" id="1_tcf2h"]
+[ext_resource type="PackedScene" uid="uid://dsohp8dyryit5" path="res://_tools/monitors.tscn" id="2_4717r"]
+[ext_resource type="PackedScene" uid="uid://duc2akslqnhhs" path="res://player/player.tscn" id="3_fyhu2"]
+[ext_resource type="PackedScene" uid="uid://dobv00wgcr200" path="res://boss/boss.tscn" id="5_ov2xu"]
+[ext_resource type="Script" uid="uid://dpmsyptg0swdg" path="res://player/player_controller.gd" id="7_b2suy"]
+[ext_resource type="Script" uid="uid://0cvbjsum3pm6" path="res://cut_scene/executors/cs_executor.gd" id="9_fyhu2"]
+[ext_resource type="Script" uid="uid://csl86prjuvw6l" path="res://cut_scene/executors/cse_dialogue.gd" id="9_mad0u"]
+[ext_resource type="PackedScene" uid="uid://gy64jp4l3ui0" path="res://world/pause_menu/pause.tscn" id="10_mad0u"]
+[ext_resource type="Script" uid="uid://bdfxrrmuw1jjr" path="res://boss/boss_controller.gd" id="11_h8lre"]
+[ext_resource type="Script" uid="uid://bsmnnkjuuoa0k" path="res://cut_scene/dialogue.gd" id="11_ov2xu"]
+[ext_resource type="Script" uid="uid://yn5r473sp3kx" path="res://world/died_menu.gd" id="13_ocfjn"]
+[ext_resource type="PackedScene" uid="uid://bhc71w56wjkuj" path="res://world/dialogue.tscn" id="14_b2suy"]
+[ext_resource type="Script" uid="uid://b114re54x6mes" path="res://world/win_menu.gd" id="14_dqqhb"]
+[ext_resource type="Script" uid="uid://04rqm4n1fr6q" path="res://cut_scene/CSMng.gd" id="15_b2suy"]
+
+[sub_resource type="Resource" id="Resource_ocfjn"]
+script = ExtResource("11_ov2xu")
+textes = Array[String](["Start 1", "Start 1Start 12", "Start 1Start 1Start 13"])
+metadata/_custom_type_script = "uid://bsmnnkjuuoa0k"
+
+[sub_resource type="Resource" id="Resource_dqqhb"]
+script = ExtResource("9_mad0u")
+text = SubResource("Resource_ocfjn")
+metadata/_custom_type_script = "uid://csl86prjuvw6l"
+
+[sub_resource type="Resource" id="Resource_b2suy"]
+script = ExtResource("11_ov2xu")
+textes = Array[String](["DIED 1", "DIED 22"])
+metadata/_custom_type_script = "uid://bsmnnkjuuoa0k"
+
+[sub_resource type="Resource" id="Resource_h8lre"]
+script = ExtResource("9_mad0u")
+text = SubResource("Resource_b2suy")
+metadata/_custom_type_script = "uid://csl86prjuvw6l"
+
+[sub_resource type="Resource" id="Resource_ysn08"]
+script = ExtResource("11_ov2xu")
+textes = Array[String](["Phase 1 -> 2", "Phase 1 -> 2.", "Phase 1 -> 2.."])
+metadata/_custom_type_script = "uid://bsmnnkjuuoa0k"
+
+[sub_resource type="Resource" id="Resource_m0cxt"]
+script = ExtResource("9_mad0u")
+text = SubResource("Resource_ysn08")
+metadata/_custom_type_script = "uid://csl86prjuvw6l"
+
+[sub_resource type="Resource" id="Resource_j34ew"]
+script = ExtResource("11_ov2xu")
+textes = Array[String](["Phase 2 -> 3", "Phase 2 -> 3.", "Phase 2 -> 3.."])
+metadata/_custom_type_script = "uid://bsmnnkjuuoa0k"
+
+[sub_resource type="Resource" id="Resource_p2iis"]
+script = ExtResource("9_mad0u")
+text = SubResource("Resource_j34ew")
+metadata/_custom_type_script = "uid://csl86prjuvw6l"
+
+[sub_resource type="Resource" id="Resource_aysyn"]
+script = ExtResource("11_ov2xu")
+textes = Array[String](["Phase 3 -> 4 last", "Phase 3 -> 4 las", "Phase 3 -> 4 la"])
+metadata/_custom_type_script = "uid://bsmnnkjuuoa0k"
+
+[sub_resource type="Resource" id="Resource_o1net"]
+script = ExtResource("9_mad0u")
+text = SubResource("Resource_aysyn")
+metadata/_custom_type_script = "uid://csl86prjuvw6l"
+
+[sub_resource type="Resource" id="Resource_3ljsx"]
+script = ExtResource("11_ov2xu")
+textes = Array[String](["win"])
+metadata/_custom_type_script = "uid://bsmnnkjuuoa0k"
+
+[sub_resource type="Resource" id="Resource_gi7ib"]
+script = ExtResource("9_mad0u")
+text = SubResource("Resource_3ljsx")
+metadata/_custom_type_script = "uid://csl86prjuvw6l"
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_tcf2h")
+
+[node name="Input" type="Label" parent="."]
+offset_left = 1494.0
+offset_top = 91.0
+offset_right = 1710.0
+offset_bottom = 140.0
+text = "ECS - quit
+SPACE - attack"
+
+[node name="DBG" parent="Input" instance=ExtResource("2_4717r")]
+layout_mode = 0
+offset_left = 185.0
+offset_top = -77.0
+offset_right = 401.0
+offset_bottom = 108.0
+
+[node name="Player" parent="." instance=ExtResource("3_fyhu2")]
+position = Vector2(684, 529)
+
+[node name="PlayerConctroller" type="Node" parent="." node_paths=PackedStringArray("pl", "target")]
+script = ExtResource("7_b2suy")
+pl = NodePath("../Player")
+target = NodePath("../Boss")
+
+[node name="Boss" parent="." instance=ExtResource("5_ov2xu")]
+position = Vector2(1378, 562)
+
+[node name="BossController" type="Node" parent="." node_paths=PackedStringArray("boss", "target")]
+script = ExtResource("11_h8lre")
+boss = NodePath("../Boss")
+target = NodePath("../Player")
+
+[node name="Timer" type="Timer" parent="BossController"]
+
+[node name="CutSceneMng" type="Node" parent="." node_paths=PackedStringArray("dialogue", "died_menu", "win_menu", "pl_ctrl", "boss_ctrl")]
+script = ExtResource("15_b2suy")
+dialogue = NodePath("../Dialogue")
+died_menu = NodePath("../DiedMenu")
+win_menu = NodePath("../WinMenu")
+pl_ctrl = NodePath("../PlayerConctroller")
+boss_ctrl = NodePath("../BossController")
+cs_start = SubResource("Resource_dqqhb")
+cs_dying = SubResource("Resource_h8lre")
+cs_phases = Array[ExtResource("9_fyhu2")]([SubResource("Resource_m0cxt"), SubResource("Resource_p2iis"), SubResource("Resource_o1net")])
+cs_win = SubResource("Resource_gi7ib")
+
+[node name="Dialogue" parent="." instance=ExtResource("14_b2suy")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("10_mad0u")]
+offset_left = 825.0
+offset_top = 114.0
+offset_right = 895.0
+offset_bottom = 215.0
+
+[node name="DiedMenu" type="PanelContainer" parent="."]
+offset_left = 517.0
+offset_top = 191.0
+offset_right = 603.0
+offset_bottom = 285.0
+script = ExtResource("13_ocfjn")
+
+[node name="1" type="MarginContainer" parent="DiedMenu"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="1" type="VBoxContainer" parent="DiedMenu/1"]
+layout_mode = 2
+
+[node name="Died" type="Label" parent="DiedMenu/1/1"]
+layout_mode = 2
+text = "Died"
+
+[node name="Button" type="Button" parent="DiedMenu/1/1"]
+layout_mode = 2
+text = "Retry"
+
+[node name="WinMenu" type="PanelContainer" parent="."]
+offset_left = 970.0
+offset_top = 158.0
+offset_right = 1030.0
+offset_bottom = 240.0
+script = ExtResource("14_dqqhb")
+
+[node name="1" type="MarginContainer" parent="WinMenu"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="1" type="VBoxContainer" parent="WinMenu/1"]
+layout_mode = 2
+
+[node name="Died" type="Label" parent="WinMenu/1/1"]
+layout_mode = 2
+text = "Win"
+
+[node name="Button" type="Button" parent="WinMenu/1/1"]
+layout_mode = 2
+text = "Ok"

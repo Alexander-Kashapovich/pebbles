@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://drkd71rmgtlws"]
+
+[ext_resource type="Script" uid="uid://dktninvvypqr7" path="res://misc/property_bar.gd" id="1_qyha7"]
+
+[sub_resource type="Gradient" id="Gradient_jxwat"]
+colors = PackedColorArray(0.447059, 0, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2ydkn"]
+gradient = SubResource("Gradient_jxwat")
+
+[sub_resource type="Curve" id="Curve_jxwat"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.610195), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_2ydkn"]
+curve = SubResource("Curve_jxwat")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_umu1x"]
+particle_flag_disable_z = true
+spread = 66.176
+initial_velocity_max = 558.06
+gravity = Vector3(0, 980.829, 0)
+linear_accel_min = -15.92
+linear_accel_max = 27.39
+scale_min = 4.0
+scale_max = 16.0
+scale_curve = SubResource("CurveTexture_2ydkn")
+color = Color(0.84404, 0.343288, 0.323033, 1)
+color_ramp = SubResource("GradientTexture1D_2ydkn")
+
+[node name="HpBar" type="ColorRect"]
+custom_minimum_size = Vector2(32, 4)
+offset_right = 261.0
+offset_bottom = 4.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+color = Color(0.870588, 0.572549, 0.729412, 1)
+script = ExtResource("1_qyha7")
+_max_val = 100.0
+
+[node name="Tmp" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 0
+offset_bottom = 4.0
+
+[node name="Val" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 0
+offset_bottom = 4.0
+color = Color(1, 0, 0, 1)
+
+[node name="Particle" type="GPUParticles2D" parent="Val"]
+position = Vector2(0, 8)
+emitting = false
+amount = 64
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+interpolate = false
+fract_delta = false
+process_material = SubResource("ParticleProcessMaterial_umu1x")

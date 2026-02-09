@@ -1,0 +1,61 @@
+[336] CSMng -> Start 
+[336] CSE_Dialogue -> start text Start 1..... 
+[336] DialoguePanel -> Started 
+[336] DialoguePanel -> cur id 0 of 3 
+[336] DialoguePanel -> set text::Start 1 
+[390] DialoguePanel -> cur id 1 of 3 
+[390] DialoguePanel -> set text::Start 1Start 12 
+[462] DialoguePanel -> cur id 2 of 3 
+[462] DialoguePanel -> set text::Start 1Start 1Start 13 
+[534] DialoguePanel -> cur id 3 of 3 
+[534] DialoguePanel -> stop from _upd 
+[534] DialoguePanel -> STOP cur id 3 of 3 
+[534] CSMng -> Start battle 
+[534] DialoguePanel -> Stopped 0.5 0.0 
+[614] CSMng -> new phase 0 
+[614] CSE_Dialogue -> start text Phase 1 -> 2..... 
+[614] DialoguePanel -> Started 
+[614] DialoguePanel -> cur id 0 of 3 
+[614] DialoguePanel -> set text::Phase 1 -> 2 
+[686] DialoguePanel -> cur id 1 of 3 
+[686] DialoguePanel -> set text::Phase 1 -> 2. 
+[758] DialoguePanel -> cur id 2 of 3 
+[758] DialoguePanel -> set text::Phase 1 -> 2.. 
+[830] DialoguePanel -> cur id 3 of 3 
+[830] DialoguePanel -> stop from _upd 
+[830] DialoguePanel -> STOP cur id 3 of 3 
+[830] CSMng -> Start battle 
+[830] DialoguePanel -> Stopped 0.5 0.0 
+[932] CSMng -> new phase 1 
+[932] CSE_Dialogue -> start text Phase 2 -> 3..... 
+[932] DialoguePanel -> Started 
+[932] DialoguePanel -> cur id 0 of 3 
+[932] DialoguePanel -> set text::Phase 2 -> 3 
+[1004] DialoguePanel -> cur id 1 of 3 
+[1004] DialoguePanel -> set text::Phase 2 -> 3. 
+[1076] DialoguePanel -> cur id 2 of 3 
+[1076] DialoguePanel -> set text::Phase 2 -> 3.. 
+[1148] DialoguePanel -> cur id 3 of 3 
+[1148] DialoguePanel -> stop from _upd 
+[1148] DialoguePanel -> STOP cur id 3 of 3 
+[1148] CSMng -> Start battle 
+[1148] DialoguePanel -> Stopped 0.5 0.0 
+[1245] CSMng -> new phase 2 
+[1245] CSE_Dialogue -> start text Phase 3 -> 4 last..... 
+[1245] DialoguePanel -> Started 
+[1245] DialoguePanel -> cur id 0 of 3 
+[1245] DialoguePanel -> set text::Phase 3 -> 4 last 
+[1317] DialoguePanel -> cur id 1 of 3 
+[1317] DialoguePanel -> set text::Phase 3 -> 4 las 
+[1389] DialoguePanel -> cur id 2 of 3 
+[1389] DialoguePanel -> set text::Phase 3 -> 4 la 
+[1461] DialoguePanel -> cur id 3 of 3 
+[1461] DialoguePanel -> stop from _upd 
+[1461] DialoguePanel -> STOP cur id 3 of 3 
+[1461] CSMng -> Start battle 
+[1461] CSMng -> player died 
+[1461] CSE_Dialogue -> start text DIED 1..... 
+[1461] DialoguePanel -> Started 
+[1461] DialoguePanel -> cur id 0 of 2 
+[1461] DialoguePanel -> set text::DIED 1 
+[1461] DialoguePanel -> Stopped 0.5 0.0 

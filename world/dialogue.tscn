@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhc71w56wjkuj"]
+
+[ext_resource type="Script" uid="uid://mpqh2ojjqmov" path="res://cut_scene/dialogue_panel.gd" id="1_gkwvr"]
+
+[node name="Dialogue" type="PanelContainer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 553.0
+offset_top = 806.0
+offset_right = 1191.0
+offset_bottom = 976.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_gkwvr")
+
+[node name="1" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 16
+
+[node name="Label" type="RichTextLabel" parent="1"]
+layout_mode = 2
+text = "TXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXTTXT"
+fit_content = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5

@@ -1,0 +1,1576 @@
+[gd_scene load_steps=5 format=3 uid="uid://boa6x5b7b42aa"]
+
+[ext_resource type="Script" uid="uid://dmd543fwd4eq5" path="res://_tools/UmlDraw/uml_draw.gd" id="1_jsdem"]
+[ext_resource type="PackedScene" uid="uid://dg2s2ktmkrhxg" path="res://_tools/UmlDraw/class_box.tscn" id="2_3ncnt"]
+[ext_resource type="Script" uid="uid://cjxgjjyix8far" path="res://_tools/UmlDraw/class_box.gd" id="3_qaxmb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5s8hf"]
+
+[node name="UmlDraw" type="Node2D" node_paths=PackedStringArray("boxes")]
+script = ExtResource("1_jsdem")
+box_scene = ExtResource("2_3ncnt")
+boxes = {
+"Animator": NodePath("Animator"),
+"BattleFrame": NodePath("BattleFrame"),
+"Boss": NodePath("Boss"),
+"CastTest": NodePath("CastTest"),
+"ClassBoxTool": NodePath("ClassBoxTool"),
+"Controller": NodePath("Controller"),
+"Cost": NodePath("Cost"),
+"Damage": NodePath("Damage"),
+"Effect": NodePath("Effect"),
+"FSM": NodePath("FSM"),
+"LoopAnimator": NodePath("LoopAnimator"),
+"ManaBurn": NodePath("ManaBurn"),
+"ManaTest": NodePath("ManaTest"),
+"OneShotAnimator": NodePath("OneShotAnimator"),
+"Player": NodePath("Player"),
+"PlayerController": NodePath("PlayerController"),
+"PropertyBar": NodePath("PropertyBar"),
+"ReloadEffect": NodePath("ReloadEffect"),
+"ReloadTest": NodePath("ReloadTest"),
+"ReloadTimer": NodePath("ReloadTimer"),
+"ReloaderBar": NodePath("ReloaderBar"),
+"Skill": NodePath("Skill"),
+"SkillScene": NodePath("SkillScene"),
+"State": NodePath("State"),
+"UmlDrawerTool": NodePath("UmlDrawerTool"),
+"Unit": NodePath("Unit"),
+"UnitSoul": NodePath("UnitSoul"),
+"UnitStats": NodePath("UnitStats"),
+"Visual": NodePath("Visual"),
+"VitalProperty": NodePath("VitalProperty"),
+"World": NodePath("World")
+}
+metadata/_edit_lock_ = true
+
+[node name="Animator" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "inherits") instance=ExtResource("2_3ncnt")]
+offset_left = 764.0
+offset_top = 908.0
+offset_right = 910.0
+offset_bottom = 1144.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String]([]),
+"funcs": ["[color=spring_green]void[/color] _init()", "[color=spring_green]void[/color] start()", "[color=spring_green]void[/color] stop()"],
+"is_abstract": false,
+"nom": "Animator",
+"vars": Array[String](["sp : [color=spring_green]Sprite2D[/color]", "_acc : [color=spring_green]float[/color]", "spf : [color=spring_green]float[/color]"])
+}
+boxes = {
+"Animator": NodePath("."),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+inherits = [NodePath("../LoopAnimator"), NodePath("../OneShotAnimator")]
+
+[node name="LoopAnimator" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "parent") instance=ExtResource("2_3ncnt")]
+offset_left = 2408.0
+offset_right = 2678.0
+offset_bottom = 264.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "Animator",
+"depends": Array[String]([]),
+"funcs": ["[color=spring_green]void[/color] _process()", "[color=spring_green]void[/color] _init()", "[color=spring_green]void[/color] start()", "[color=spring_green]void[/color] stop()"],
+"is_abstract": false,
+"nom": "LoopAnimator",
+"vars": Array[String](["sp : [color=spring_green]Sprite2D[/color]", "_acc : [color=spring_green]float[/color]", "spf : [color=spring_green]float[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("."),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+parent = NodePath("../Animator")
+
+[node name="OneShotAnimator" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "parent") instance=ExtResource("2_3ncnt")]
+offset_left = 2678.0
+offset_right = 2984.0
+offset_bottom = 264.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "Animator",
+"depends": Array[String]([]),
+"funcs": ["[color=spring_green]void[/color] _process()", "[color=spring_green]void[/color] _init()", "[color=spring_green]void[/color] start()", "[color=spring_green]void[/color] stop()"],
+"is_abstract": false,
+"nom": "OneShotAnimator",
+"vars": Array[String](["sp : [color=spring_green]Sprite2D[/color]", "_acc : [color=spring_green]float[/color]", "spf : [color=spring_green]float[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("."),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+parent = NodePath("../Animator")
+
+[node name="Visual" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "deps") instance=ExtResource("2_3ncnt")]
+offset_left = 2984.0
+offset_right = 3244.0
+offset_bottom = 264.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String](["Animator"]),
+"funcs": ["[color=spring_green]void[/color] _ready()", "[color=spring_green]void[/color] turn()", "[color=spring_green]void[/color] set_tex()", "[color=spring_green]void[/color] set_fps()"],
+"is_abstract": false,
+"nom": "Visual",
+"vars": Array[String](["sp : [color=spring_green]Sprite2D[/color]", "animators : [color=spring_green]Dictionary[/color]", "cur_animator : [color=spring_green]Animator[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("."),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+deps = [NodePath("../Animator")]
+
+[node name="ClassBoxTool" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "deps") instance=ExtResource("2_3ncnt")]
+offset_right = 410.0
+offset_bottom = 908.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String](["ClassBoxTool"]),
+"funcs": ["[color=spring_green]void[/color] @locked_setter()", "[color=spring_green]void[/color] @draw_depends_setter()", "[color=spring_green]void[/color] @parent_setter()", "[color=spring_green]void[/color] @deps_setter()", "[color=spring_green]void[/color] place_parent()", "[color=spring_green]void[/color] place_depends()", "[color=spring_green]void[/color] place_inherits()", "[color=spring_green]void[/color] set_nom()", "[color=spring_green]void[/color] set_vars()", "[color=spring_green]void[/color] set_funcs()", "[color=spring_green]void[/color] set_data()", "[color=spring_green]void[/color] upd_depends()", "[color=spring_green]void[/color] _draw()", "[color=spring_green]void[/color] _draw_parent()", "[color=spring_green]void[/color] _draw_depends()", "[color=spring_green]void[/color] _draw_arrow()"],
+"is_abstract": false,
+"nom": "ClassBoxTool",
+"vars": Array[String](["locked : [color=spring_green]bool[/color]", "draw_depends : [color=spring_green]bool[/color]", "data : [color=spring_green]Dictionary[/color]", "boxes : [color=spring_green]Dictionary[/color][String : [color=ROYAL_BLUE]ClassBoxTool[/color]]", "inherits : [color=spring_green]Array[/color][[color=ROYAL_BLUE]ClassBoxTool[/color]]", "parent : [color=spring_green]ClassBoxTool[/color]", "depends : [color=spring_green]Array[/color][String]", "deps : [color=spring_green]Array[/color][[color=ROYAL_BLUE]ClassBoxTool[/color]]", "__aaasdg : [color=spring_green]Callable[/color]", "__aasg : [color=spring_green]Callable[/color]", "__aasdg : [color=spring_green]Callable[/color]", "__aaasdvvg : [color=spring_green]Callable[/color]", "__aassg : [color=spring_green]Callable[/color]", "__aasdggs : [color=spring_green]Callable[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("."),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+deps = [NodePath(".")]
+
+[node name="UmlDrawerTool" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "deps") instance=ExtResource("2_3ncnt")]
+offset_left = 410.0
+offset_right = 820.0
+offset_bottom = 908.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String](["ClassBoxTool"]),
+"funcs": ["[color=spring_green]void[/color] @find_setter()", "[color=spring_green]void[/color] @print_vars_setter()", "[color=spring_green]void[/color] @print_funcs_setter()", "[color=spring_green]void[/color] _ready()", "[color=spring_green]void[/color] clear()", "[color=spring_green]void[/color] go()", "[color=spring_green]void[/color] place()", "[color=spring_green]void[/color] collect_classes()", "[color=spring_green]Array[/color] get_properties()", "[color=spring_green]String[/color] parse_property_type()", "[color=spring_green]String[/color] parse_dictionary_hint()", "[color=spring_green]String[/color] parse_array_hint()", "[color=spring_green]String[/color] resolve_type()", "[color=spring_green]String[/color] get_property_type()", "[color=spring_green]String[/color] bbcoded_type()", "[color=spring_green]void[/color] _scan_dir()", "[color=spring_green]void[/color] build_boxes()", "[color=spring_green]Array[/color] build_trees()", "[color=spring_green]void[/color] _build_tree_recursive()", "[color=spring_green]ClassBoxTool[/color] add_class_box()", "[color=spring_green]void[/color] _draw()"],
+"is_abstract": false,
+"nom": "UmlDrawerTool",
+"vars": Array[String](["find : [color=spring_green]String[/color]", "print_vars : [color=spring_green]bool[/color]", "print_funcs : [color=spring_green]bool[/color]", "box_scene : [color=spring_green]PackedScene[/color]", "classes : [color=spring_green]Dictionary[/color][String : Dictionary]", "boxes : [color=spring_green]Dictionary[/color][String : [color=ROYAL_BLUE]ClassBoxTool[/color]]", "__gas : [color=spring_green]Callable[/color]", "__asd : [color=spring_green]Callable[/color]", "__asg : [color=spring_green]Callable[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("."),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+deps = [NodePath("../ClassBoxTool")]
+
+[node name="BattleFrame" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes") instance=ExtResource("2_3ncnt")]
+offset_left = 836.0
+offset_top = 1144.0
+offset_right = 980.0
+offset_bottom = 1212.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String]([]),
+"funcs": [],
+"is_abstract": false,
+"nom": "BattleFrame",
+"vars": Array[String]([])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("."),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+
+[node name="PropertyBar" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes") instance=ExtResource("2_3ncnt")]
+offset_left = 820.0
+offset_right = 1084.0
+offset_bottom = 432.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String]([]),
+"funcs": ["[color=spring_green]void[/color] _ready()", "[color=spring_green]void[/color] setup()", "[color=spring_green]void[/color] _set_cur()", "[color=spring_green]void[/color] _upd_bars()", "[color=spring_green]void[/color] _particle_shot()", "[color=spring_green]void[/color] _process()"],
+"is_abstract": false,
+"nom": "PropertyBar",
+"vars": Array[String](["val_bar : [color=spring_green]ColorRect[/color]", "tmp_bar : [color=spring_green]ColorRect[/color]", "particle : [color=spring_green]GPUParticles2D[/color]", "_max_val : [color=spring_green]float[/color]", "_cur : [color=spring_green]float[/color]", "unit : [color=spring_green]Node[/color]", "property : [color=spring_green]String[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("."),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+
+[node name="ReloadTimer" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes") instance=ExtResource("2_3ncnt")]
+offset_left = 1984.0
+offset_right = 2180.0
+offset_bottom = 320.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String]([]),
+"funcs": ["[color=spring_green]void[/color] _ready()", "[color=spring_green]void[/color] start()", "[color=spring_green]void[/color] stop()", "[color=spring_green]void[/color] add_time()", "[color=spring_green]bool[/color] is_active()", "[color=spring_green]float[/color] percentage()", "[color=spring_green]void[/color] _process()"],
+"is_abstract": false,
+"nom": "ReloadTimer",
+"vars": Array[String](["_acc : [color=spring_green]float[/color]", "_threshold : [color=spring_green]float[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("."),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+
+[node name="ReloaderBar" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "deps") instance=ExtResource("2_3ncnt")]
+offset_left = 1083.0
+offset_top = 908.0
+offset_right = 1298.0
+offset_bottom = 1116.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String](["ReloadTimer"]),
+"funcs": ["[color=spring_green]void[/color] @r_setter()", "[color=spring_green]void[/color] _ready()", "[color=spring_green]void[/color] _draw()"],
+"is_abstract": false,
+"nom": "ReloaderBar",
+"vars": Array[String](["timer : [color=spring_green]ReloadTimer[/color]", "r : [color=spring_green]float[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("."),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+deps = [NodePath("../ReloadTimer")]
+
+[node name="VitalProperty" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes") instance=ExtResource("2_3ncnt")]
+offset_left = 2180.0
+offset_right = 2408.0
+offset_bottom = 292.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String]([]),
+"funcs": ["[color=spring_green]void[/color] _init()", "[color=spring_green]void[/color] fill()", "[color=spring_green]bool[/color] has()", "[color=spring_green]float[/color] percentage()", "[color=spring_green]void[/color] force_increase()", "[color=spring_green]void[/color] force_decrease()"],
+"is_abstract": false,
+"nom": "VitalProperty",
+"vars": Array[String](["max_val : [color=spring_green]float[/color]", "_val : [color=spring_green]float[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("."),
+"World": NodePath("../World")
+}
+
+[node name="CastTest" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "inherits") instance=ExtResource("2_3ncnt")]
+offset_left = 716.0
+offset_top = 1144.0
+offset_right = 836.0
+offset_bottom = 1240.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String]([]),
+"funcs": ["[color=spring_green]void[/color] test()"],
+"is_abstract": true,
+"nom": "CastTest",
+"vars": Array[String]([])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("."),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+inherits = [NodePath("../ManaTest"), NodePath("../ReloadTest")]
+
+[node name="ManaTest" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "parent") instance=ExtResource("2_3ncnt")]
+offset_left = 2116.0
+offset_top = 908.0
+offset_right = 2334.0
+offset_bottom = 1060.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "CastTest",
+"depends": Array[String]([]),
+"funcs": ["[color=spring_green]bool[/color] test()", "[color=spring_green]void[/color] test()"],
+"is_abstract": false,
+"nom": "ManaTest",
+"vars": Array[String](["val : [color=spring_green]float[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("."),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+parent = NodePath("../CastTest")
+
+[node name="ReloadTest" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "parent") instance=ExtResource("2_3ncnt")]
+offset_left = 2616.0
+offset_top = 908.0
+offset_right = 2845.0
+offset_bottom = 1032.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "CastTest",
+"depends": Array[String]([]),
+"funcs": ["[color=spring_green]bool[/color] test()", "[color=spring_green]void[/color] test()"],
+"is_abstract": false,
+"nom": "ReloadTest",
+"vars": Array[String]([])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("."),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+parent = NodePath("../CastTest")
+
+[node name="Cost" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "deps") instance=ExtResource("2_3ncnt")]
+offset_left = 1298.0
+offset_top = 908.0
+offset_right = 1592.0
+offset_bottom = 1088.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String](["Effect", "CastTest"]),
+"funcs": ["[color=spring_green]bool[/color] test()", "[color=spring_green]void[/color] execute()"],
+"is_abstract": false,
+"nom": "Cost",
+"vars": Array[String](["caster_effects : [color=spring_green]Array[/color][[color=ORANGE]Effect[/color]]", "tests : [color=spring_green]Array[/color][[color=ORANGE]CastTest[/color]]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("."),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+deps = [NodePath("../CastTest"), NodePath("../Effect")]
+
+[node name="Effect" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "inherits") instance=ExtResource("2_3ncnt")]
+offset_left = 557.0
+offset_top = 1144.0
+offset_right = 716.0
+offset_bottom = 1240.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String]([]),
+"funcs": ["[color=spring_green]void[/color] execute()"],
+"is_abstract": true,
+"nom": "Effect",
+"vars": Array[String]([])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("."),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+inherits = [NodePath("../Damage"), NodePath("../ManaBurn"), NodePath("../ReloadEffect")]
+
+[node name="Damage" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "parent") instance=ExtResource("2_3ncnt")]
+offset_left = 2845.0
+offset_top = 908.0
+offset_right = 3020.0
+offset_bottom = 1032.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "Effect",
+"depends": Array[String]([]),
+"funcs": ["[color=spring_green]void[/color] execute()"],
+"is_abstract": false,
+"nom": "Damage",
+"vars": Array[String](["val : [color=spring_green]float[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("."),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+parent = NodePath("../Effect")
+
+[node name="ManaBurn" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "parent") instance=ExtResource("2_3ncnt")]
+offset_top = 1144.0
+offset_right = 197.0
+offset_bottom = 1268.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "Effect",
+"depends": Array[String]([]),
+"funcs": ["[color=spring_green]void[/color] execute()"],
+"is_abstract": false,
+"nom": "ManaBurn",
+"vars": Array[String](["val : [color=spring_green]float[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("."),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+parent = NodePath("../Effect")
+
+[node name="ReloadEffect" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "parent") instance=ExtResource("2_3ncnt")]
+offset_left = 197.0
+offset_top = 1144.0
+offset_right = 414.0
+offset_bottom = 1268.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "Effect",
+"depends": Array[String]([]),
+"funcs": ["[color=spring_green]void[/color] execute()"],
+"is_abstract": false,
+"nom": "ReloadEffect",
+"vars": Array[String](["val : [color=spring_green]float[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("."),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+parent = NodePath("../Effect")
+
+[node name="Skill" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "deps") instance=ExtResource("2_3ncnt")]
+offset_left = 1690.0
+offset_right = 1984.0
+offset_bottom = 376.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String](["Cost", "Effect", "CastTest"]),
+"funcs": ["[color=spring_green]bool[/color] can_cast()", "[color=spring_green]void[/color] apply_to_caster()", "[color=spring_green]void[/color] apply_to_target()", "[color=spring_green]void[/color] execute()"],
+"is_abstract": false,
+"nom": "Skill",
+"vars": Array[String](["nom : [color=spring_green]String[/color]", "icon : [color=spring_green]Texture2D[/color]", "costs : [color=spring_green]Array[/color][[color=ORANGE]Cost[/color]]", "caster_effects : [color=spring_green]Array[/color][[color=ORANGE]Effect[/color]]", "target_effects : [color=spring_green]Array[/color][[color=ORANGE]Effect[/color]]", "tests : [color=spring_green]Array[/color][[color=ORANGE]CastTest[/color]]", "skill_scene : [color=spring_green]PackedScene[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("."),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+deps = [NodePath("../CastTest"), NodePath("../Cost"), NodePath("../Effect")]
+
+[node name="SkillScene" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes") instance=ExtResource("2_3ncnt")]
+offset_left = 910.0
+offset_top = 908.0
+offset_right = 1083.0
+offset_bottom = 1116.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String]([]),
+"funcs": ["[color=spring_green]void[/color] start()", "[color=spring_green]void[/color] _process()", "[color=spring_green]void[/color] finish()"],
+"is_abstract": false,
+"nom": "SkillScene",
+"vars": Array[String](["target : [color=spring_green]Vector2[/color]", "_acc : [color=spring_green]float[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("."),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+
+[node name="Controller" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "inherits", "deps") instance=ExtResource("2_3ncnt")]
+offset_left = 1592.0
+offset_top = 908.0
+offset_right = 1732.0
+offset_bottom = 1088.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String](["Unit"]),
+"funcs": ["[color=spring_green]void[/color] off()", "[color=spring_green]void[/color] on()"],
+"is_abstract": false,
+"nom": "Controller",
+"vars": Array[String](["unit : [color=spring_green]Unit[/color]", "target : [color=spring_green]Unit[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("."),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+inherits = [NodePath("../PlayerController")]
+deps = [NodePath("../Unit")]
+
+[node name="PlayerController" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "parent", "deps") instance=ExtResource("2_3ncnt")]
+offset_left = 246.0
+offset_top = 908.0
+offset_right = 542.0
+offset_bottom = 1144.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "Controller",
+"depends": Array[String](["Unit"]),
+"funcs": ["[color=spring_green]void[/color] _input()", "[color=spring_green]void[/color] use_skill()", "[color=spring_green]void[/color] off()", "[color=spring_green]void[/color] on()"],
+"is_abstract": false,
+"nom": "PlayerController",
+"vars": Array[String](["unit : [color=spring_green]Unit[/color]", "target : [color=spring_green]Unit[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("."),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+parent = NodePath("../Controller")
+deps = [NodePath("../Unit")]
+
+[node name="Unit" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "deps") instance=ExtResource("2_3ncnt")]
+offset_left = 1084.0
+offset_right = 1370.0
+offset_bottom = 432.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String](["Skill", "UnitStats", "VitalProperty", "PropertyBar", "ReloadTimer"]),
+"funcs": ["[color=spring_green]void[/color] _ready()", "[color=spring_green]void[/color] to_reload()", "[color=spring_green]void[/color] die()", "[color=spring_green]void[/color] say()"],
+"is_abstract": false,
+"nom": "Unit",
+"vars": Array[String](["skills : [color=spring_green]Dictionary[/color][int : [color=ORANGE]Skill[/color]]", "stats : [color=spring_green]UnitStats[/color]", "hp : [color=spring_green]VitalProperty[/color]", "mana : [color=spring_green]VitalProperty[/color]", "hp_bar : [color=spring_green]PropertyBar[/color]", "mana_bar : [color=spring_green]PropertyBar[/color]", "logger : [color=spring_green]RichTextLabel[/color]", "reload_timer : [color=spring_green]ReloadTimer[/color]", "is_reloaded : [color=spring_green]bool[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("."),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+deps = [NodePath("../PropertyBar"), NodePath("../ReloadTimer"), NodePath("../VitalProperty"), NodePath("../Skill"), NodePath("../UnitStats")]
+
+[node name="UnitSoul" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "deps") instance=ExtResource("2_3ncnt")]
+offset_left = 2334.0
+offset_top = 908.0
+offset_right = 2616.0
+offset_bottom = 1060.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String](["Skill", "UnitStats"]),
+"funcs": [],
+"is_abstract": false,
+"nom": "UnitSoul",
+"vars": Array[String](["name : [color=spring_green]String[/color]", "skills : [color=spring_green]Dictionary[/color][int : [color=ORANGE]Skill[/color]]", "stats : [color=spring_green]UnitStats[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("."),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+deps = [NodePath("../Skill"), NodePath("../UnitStats")]
+
+[node name="UnitStats" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes") instance=ExtResource("2_3ncnt")]
+offset_left = 1732.0
+offset_top = 908.0
+offset_right = 1894.0
+offset_bottom = 1088.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String]([]),
+"funcs": [],
+"is_abstract": false,
+"nom": "UnitStats",
+"vars": Array[String](["attack : [color=spring_green]int[/color]", "power : [color=spring_green]float[/color]", "defense : [color=spring_green]float[/color]", "shield : [color=spring_green]int[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("."),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+
+[node name="FSM" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "deps") instance=ExtResource("2_3ncnt")]
+offset_top = 908.0
+offset_right = 246.0
+offset_bottom = 1144.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String](["State"]),
+"funcs": ["[color=spring_green]void[/color] init()", "[color=spring_green]void[/color] transition_to()", "[color=spring_green]void[/color] _physics_process()"],
+"is_abstract": false,
+"nom": "FSM",
+"vars": Array[String](["states : [color=spring_green]Array[/color][[color=ORANGE]State[/color]]", "_states : [color=spring_green]Dictionary[/color]", "_state : [color=spring_green]State[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("."),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+deps = [NodePath("../State")]
+
+[node name="State" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "deps") instance=ExtResource("2_3ncnt")]
+offset_left = 1370.0
+offset_right = 1690.0
+offset_bottom = 376.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String](["Unit"]),
+"funcs": ["[color=spring_green]void[/color] fsm_init()", "[color=spring_green]void[/color] enter()", "[color=spring_green]void[/color] enter_update()", "[color=spring_green]void[/color] exit()", "[color=spring_green]void[/color] exec()"],
+"is_abstract": false,
+"nom": "State",
+"vars": Array[String](["texture : [color=spring_green]Texture2D[/color]", "frames : [color=spring_green]int[/color]", "anima_behavior : [color=spring_green]Visual.Anima[/color]", "id : [color=spring_green]int[/color]", "unit : [color=spring_green]Unit[/color]", "is_locked : [color=spring_green]bool[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("."),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+deps = [NodePath("../Unit")]
+
+[node name="Boss" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "deps") instance=ExtResource("2_3ncnt")]
+offset_left = 1894.0
+offset_top = 908.0
+offset_right = 2116.0
+offset_bottom = 1060.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String](["VitalProperty"]),
+"funcs": ["[color=spring_green]void[/color] attack()", "[color=spring_green]void[/color] apply_damage()"],
+"is_abstract": false,
+"nom": "Boss",
+"vars": Array[String](["hp : [color=spring_green]VitalProperty[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("."),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+deps = [NodePath("../VitalProperty")]
+
+[node name="Player" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes", "deps") instance=ExtResource("2_3ncnt")]
+offset_left = 542.0
+offset_top = 908.0
+offset_right = 764.0
+offset_bottom = 1144.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String](["VitalProperty"]),
+"funcs": ["[color=spring_green]void[/color] _input()", "[color=spring_green]void[/color] on()", "[color=spring_green]void[/color] off()", "[color=spring_green]void[/color] attack()", "[color=spring_green]void[/color] apply_damage()"],
+"is_abstract": false,
+"nom": "Player",
+"vars": Array[String](["hp : [color=spring_green]VitalProperty[/color]"])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("."),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath("../World")
+}
+deps = [NodePath("../VitalProperty")]
+
+[node name="World" type="PanelContainer" parent="." node_paths=PackedStringArray("boxes") instance=ExtResource("2_3ncnt")]
+offset_left = 414.0
+offset_top = 1144.0
+offset_right = 557.0
+offset_bottom = 1240.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("3_qaxmb")
+data = {
+"base": "",
+"depends": Array[String]([]),
+"funcs": ["[color=spring_green]void[/color] _input()"],
+"is_abstract": false,
+"nom": "World",
+"vars": Array[String]([])
+}
+boxes = {
+"Animator": NodePath("../Animator"),
+"BattleFrame": NodePath("../BattleFrame"),
+"Boss": NodePath("../Boss"),
+"CastTest": NodePath("../CastTest"),
+"ClassBoxTool": NodePath("../ClassBoxTool"),
+"Controller": NodePath("../Controller"),
+"Cost": NodePath("../Cost"),
+"Damage": NodePath("../Damage"),
+"Effect": NodePath("../Effect"),
+"FSM": NodePath("../FSM"),
+"LoopAnimator": NodePath("../LoopAnimator"),
+"ManaBurn": NodePath("../ManaBurn"),
+"ManaTest": NodePath("../ManaTest"),
+"OneShotAnimator": NodePath("../OneShotAnimator"),
+"Player": NodePath("../Player"),
+"PlayerController": NodePath("../PlayerController"),
+"PropertyBar": NodePath("../PropertyBar"),
+"ReloadEffect": NodePath("../ReloadEffect"),
+"ReloadTest": NodePath("../ReloadTest"),
+"ReloadTimer": NodePath("../ReloadTimer"),
+"ReloaderBar": NodePath("../ReloaderBar"),
+"Skill": NodePath("../Skill"),
+"SkillScene": NodePath("../SkillScene"),
+"State": NodePath("../State"),
+"UmlDrawerTool": NodePath("../UmlDrawerTool"),
+"Unit": NodePath("../Unit"),
+"UnitSoul": NodePath("../UnitSoul"),
+"UnitStats": NodePath("../UnitStats"),
+"Visual": NodePath("../Visual"),
+"VitalProperty": NodePath("../VitalProperty"),
+"World": NodePath(".")
+}

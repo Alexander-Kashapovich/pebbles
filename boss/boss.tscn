@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://dobv00wgcr200"]
+
+[ext_resource type="Script" uid="uid://dndvx4ipry4et" path="res://boss/boss.gd" id="1_1oc2v"]
+[ext_resource type="Script" uid="uid://nepufooq6x6t" path="res://misc/vital_property.gd" id="2_hqu54"]
+[ext_resource type="Script" uid="uid://dxpkst0by517r" path="res://Visual/visual.gd" id="3_tnfrm"]
+[ext_resource type="Texture2D" uid="uid://d3sdkc5fsc23t" path="res://icon.svg" id="4_7o460"]
+[ext_resource type="PackedScene" uid="uid://drkd71rmgtlws" path="res://misc/hp_bar.tscn" id="5_jflut"]
+
+[sub_resource type="Resource" id="Resource_ov2xu"]
+script = ExtResource("2_hqu54")
+metadata/_custom_type_script = "uid://nepufooq6x6t"
+
+[node name="Boss" type="Node2D"]
+script = ExtResource("1_1oc2v")
+hp = SubResource("Resource_ov2xu")
+
+[node name="Visual" type="Node2D" parent="." node_paths=PackedStringArray("sp")]
+script = ExtResource("3_tnfrm")
+sp = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://dxpkst0by517r"
+
+[node name="Sprite2D" type="Sprite2D" parent="Visual"]
+modulate = Color(1, 0, 0, 1)
+texture = ExtResource("4_7o460")
+
+[node name="HpBar2" parent="." node_paths=PackedStringArray("unit") instance=ExtResource("5_jflut")]
+offset_left = -277.0
+offset_top = -129.0
+offset_right = 310.0
+offset_bottom = -112.0
+size_flags_vertical = 1
+unit = NodePath("..")
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]

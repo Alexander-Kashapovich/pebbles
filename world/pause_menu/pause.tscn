@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://gy64jp4l3ui0"]
+
+[ext_resource type="Script" uid="uid://cnj0uj04ggtqo" path="res://world/pause_menu/pause.gd" id="1_uhw58"]
+
+[node name="PauseMenu" type="PanelContainer"]
+process_mode = 3
+offset_left = 626.0
+offset_top = 461.0
+offset_right = 666.0
+offset_bottom = 501.0
+script = ExtResource("1_uhw58")
+
+[node name="1" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="1" type="VBoxContainer" parent="1"]
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="1/1"]
+layout_mode = 2
+text = "Resume"
+
+[node name="Settings" type="Button" parent="1/1"]
+layout_mode = 2
+toggle_mode = true
+text = "Settings"
+
+[node name="Exit" type="Button" parent="1/1"]
+layout_mode = 2
+text = "Exit"
